@@ -8,10 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public LayerMask slimeLayer;
 
     private float horizontal;
-    [SerializeField]private float speed = 8f;
-    [SerializeField] private float jumpPower = 16f;
+    [SerializeField]private float speed = 4f;
+    [SerializeField] private float jumpPower = 5f;
     private bool isFacingRight = true;
 
     private void Update()
@@ -25,6 +26,15 @@ public class PlayerMovement : MonoBehaviour
         else if (isFacingRight && horizontal < 0f)
         {
             Flip();
+        }
+
+        if(Physics2D.OverlapCircle(groundCheck.position, 0.2f, slimeLayer))
+        {
+            speed = 2;
+        }
+        else
+        {
+            speed = 5;
         }
     }
 
