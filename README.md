@@ -3,6 +3,10 @@ Assignment 2
 
 **Build is found in the "BUILD" folder**
 
+OPTION E - SINGLETON PATTERN
+- To make the code more efficient 
+- Factory Design for Abilities: Multiple abilities in mind for our character
+
 Game Name: Chubbie's Escape from the Factory
 ___
 
