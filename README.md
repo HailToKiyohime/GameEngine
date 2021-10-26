@@ -1,6 +1,9 @@
 # GameEngine
 Assignment 2
 
+**Build is found in the "BUILD" folder**
+
+Game Name: Chubbie's Escape from the Factory
 ___
 
 Development Team: 
@@ -22,7 +25,7 @@ In-Game Screenshots:
 ___
 
 Video URL:
-
+https://youtu.be/Z2QNKBs20Dw
 ___
 
 UML Diagram: 
