@@ -14,6 +14,8 @@ public class PlayerShoot : MonoBehaviour
     PlayerMovement pm;
     private GameObject clone;
 
+    public Animator animator;
+
     private void Start()
     {
         pm = gameObject.GetComponent<PlayerMovement>();
@@ -24,6 +26,7 @@ public class PlayerShoot : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.J) && timeUntilFire < Time.time)
         {
             Shoot();
+            animator.Play("Attack");
             timeUntilFire = Time.time + fireRate;
         }
 
@@ -45,7 +48,7 @@ public class PlayerShoot : MonoBehaviour
         projectile = Pool.Instance.GetFromPool();
         projectile.transform.position = position;
 
-        projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Transform>().localScale.x*100,0);
+        projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Transform>().localScale.x*10,0);
     }
 
     public void Shield()

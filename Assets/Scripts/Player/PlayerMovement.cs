@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask slimeLayer;
 
+    public Animator animator;
+
     private float horizontal;
     [SerializeField]private float speed = 4f;
     [SerializeField] private float jumpPower = 5f;
@@ -18,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -36,16 +40,18 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = 5;
         }
+
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
+
         if(context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         }
 
-        if (context.canceled && rb.velocity.y > 0f)
+        else if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -63,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
         localScale.x *= -1f;
         transform.localScale = localScale;
     }
+
+
 
     public void Move(InputAction.CallbackContext context)
     {
