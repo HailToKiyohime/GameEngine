@@ -23,16 +23,6 @@ namespace Factory
         }
     }
 
-    public class ShieldAbility : Ability
-    {
-        private PlayerShoot ps;
-        public override void Process()
-        {
-            //Do shield
-            ps.Shield();
-        }
-    }
-
     public class AbilityFactory
     {
         public Ability GetAbility(string abilityType)
@@ -41,8 +31,6 @@ namespace Factory
             {
                 case "shoot":
                     return new ShootAbility();
-                case "shield":
-                    return new ShieldAbility();
                 default:
                     return null;
             }

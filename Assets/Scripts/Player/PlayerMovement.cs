@@ -40,6 +40,14 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = 5;
         }
+        if (IsGrounded())
+        {
+            animator.SetBool("IsJumping", false);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", true);
+        }
 
     }
 
