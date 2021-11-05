@@ -1,18 +1,12 @@
 # GameEngine
 Assignment 2
 
-**Build is found in the "BUILD" folder**
+**Build is found in the "Working build.zip" folder**
+This Project doesn't not use any Third-party assets
 
-OPTION E - SINGLETON PATTERN
-- To make the code more efficient 
-- Factory Design for Abilities: Multiple abilities in mind for our character
-
-Game Name: Chubbie's Escape from the Factory
+Game Name: Iron Ball
 ___
 
-Development Team: 
-100752265 Kimberly Hansuwan 
-100765502 Ayi Pranayanda 
 100593238 Jin Chan
 ___
 
@@ -29,7 +23,7 @@ In-Game Screenshots:
 ___
 
 Video URL:
-https://youtu.be/Z2QNKBs20Dw
+https://youtu.be/YtanPDWsdeI
 ___
 
 UML Diagram: 
