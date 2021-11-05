@@ -28,6 +28,7 @@ ___
 
 UML Diagram: 
 ![alt text](https://cdn.discordapp.com/attachments/679509961730162697/902385865278492722/unknown.png)
+![alt text](https://cdn.discordapp.com/attachments/642570994329976832/906029289353379870/URL_Map.png)
 ___
 
 Third Party Acknowledgement:
